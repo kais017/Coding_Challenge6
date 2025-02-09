@@ -38,12 +38,33 @@ const calculateBonus = (salary, performanceRating) => {
     // using if else to establish the conditions and apply each bonus rate to each performance rating
 
     console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`);
-    console.log(`Bonuse: $${calculateBonus(7000,"Good")}`);
-    // logging the test data
+    console.log(`Bonus: $${calculateBonus(7000,"Good")}`);
+// logging the test data
     
-
 // Task 4: 
 
+const calculateSubscriptionCost= (plan, months, discount = 0) =>
+{    let subscriptionRate;
+// creating a function that calculates the discount based on a monthly plan
+
+if (plan === "Basic")
+{ subscriptionRate = 10 ; }
+else if (plan === "Premium")
+    { subscriptionRate = 20 ; }
+else if (plan = "Enterprise")
+{ subscriptionRate = 50  ; }
+else{ return "Plan Unavailable"; }
+// setting the conditions and pairing each plan to each monthly rate
+
+let totalCost = subscriptionRate * months;
+let discountCost = totalCost - discount;
+
+return `${discountCost}`;
+};
+
+console.log(`Subscription 1 Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`);
+console.log(`Subscription 2 Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`);
+// logging each test value
 
 // Task 5: Returning Values
 
@@ -93,6 +114,11 @@ let tracker = createExpenseTracker();
 console.log("Total Expenses:", (tracker(200)));
 console.log("Total Expenses:", (tracker(150)));
 // logging the test data
+
+// Task 8: Recursion in JavaScript
+
+
+
 
 
 
