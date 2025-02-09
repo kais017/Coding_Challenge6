@@ -19,8 +19,24 @@ function calculateSalesTax(amount, taxRate)
 // gives us the output of amount times tax rate once logged
 
 console.log(`Sales Tax: $${Math.floor(calculateSalesTax(100, 0.07))}`);
+// used math.floor to round decimal down to a whole value
 console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`);
 // Logging the test data given
 
+// Task 3: Arrow Function
 
+// Task 4: 
+
+
+// Task 5: Returning Values
+
+function convertCurrency(amount, exchangeRate)
+// creating a gunction that calculates currency exchanges
+{ return amount * exchangeRate }
+// gives us the output of the new currency rate
+
+console.log(`Converted Amount: $${Math.floor(convertCurrency(100, 1.1))}`);
+// used math floor to round decimal down to a whole value
+console.log(`Converted Amount: $${convertCurrency(250, 0.85)}`);
+// logged the test data
 
