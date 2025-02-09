@@ -24,6 +24,23 @@ console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`);
 // Logging the test data given
 
 // Task 3: Arrow Function
+const calculateBonus = (salary, performanceRating) => {
+// creating an arrow function that calculates salary based on performance ratings
+    if (performanceRating === "Excellent") {
+        bonusRate = 0.2;
+    } else if (performanceRating === "Good") { 
+        bonusRate = 0.1; }
+    else if (performanceRating === "Average") {
+        bonusRate = 0.05; }
+    
+        return salary * bonusRate
+    }
+    // using if else to establish the conditions and apply each bonus rate to each performance rating
+
+    console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`);
+    console.log(`Bonuse: $${calculateBonus(7000,"Good")}`);
+    // logging the test data
+    
 
 // Task 4: 
 
