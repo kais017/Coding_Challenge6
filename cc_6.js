@@ -57,8 +57,28 @@ let discount9 = (orders, amount => amount > 500 ? amount * 0.9: amount);
 let discountedOrders = applyBulkDiscount(orders,discount9); 
 // applies the discount to all orders above 500
 
-console.log("Bulk Discount:", discountedOrders);
+console.log("Initial Orders:", orders);
+console.log("Orders after bulk discount:", discountedOrders);
 // logging the discounted orders
+
+// Task 7: Closures
+
+function createExpenseTracker()
+{ let totalExpenses = 0;
+     return function(expense)
+    { totalExpenses += expense; 
+        return `Total Expenses: $${totalExpenses}`;
+    };
+}
+// creates the function for finding the total expenses by adding each amount to each other
+
+let tracker = createExpenseTracker();
+console.log("Total Expenses:", (tracker(200)));
+console.log("Total Expenses:", (tracker(150)));
+// logging the test data
+
+
+
 
 
 
