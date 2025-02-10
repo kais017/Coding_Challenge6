@@ -43,7 +43,7 @@ const calculateBonus = (salary, performanceRating) => {
     
 // Task 4: 
 
-const calculateSubscriptionCost= (plan, months, discount = 0) =>
+const calculateSubscriptionCost = (plan, months, discount = 0) =>
 {    let subscriptionRate;
 // creating a function that calculates the discount based on a monthly plan
 
@@ -53,7 +53,7 @@ else if (plan === "Premium")
     { subscriptionRate = 20 ; }
 else if (plan = "Enterprise")
 { subscriptionRate = 50  ; }
-else{ return "Plan Unavailable"; }
+else { return "Plan Unavailable"; }
 // setting the conditions and pairing each plan to each monthly rate
 
 let totalCost = subscriptionRate * months;
@@ -116,6 +116,18 @@ console.log("Total Expenses:", (tracker(150)));
 // logging the test data
 
 // Task 8: Recursion in JavaScript
+
+function calculateYearsToPromotion(employeeLevel)
+// creating a function that calculates how many years until an employee reaches level 10 based on their current level
+{ if (employeeLevel >= 10)  // employeeLevel must equal 10 or more
+   {  return 0; }
+    let yearsUntil = 10 - employeeLevel;  // takes current level and subtracts it from 10 to find how many years until level 10 
+    return yearsUntil * 2; // multiplies the remaining years and multiplies it by 2 because promotions happen every two years
+}
+
+console.log("Years to Level 10:", calculateYearsToPromotion(7));
+console.log("Years to Level 10:", calculateYearsToPromotion(5));
+// Logging the test data
 
 
 
