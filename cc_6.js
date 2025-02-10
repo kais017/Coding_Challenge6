@@ -69,7 +69,7 @@ console.log(`Subscription 2 Cost: $${calculateSubscriptionCost("Premium", 12, 0)
 // Task 5: Returning Values
 
 function convertCurrency(amount, exchangeRate)
-// creating a gunction that calculates currency exchanges
+// creating a function that calculates currency exchanges
 { return amount * exchangeRate }
 // gives us the output of the new currency rate
 
@@ -82,12 +82,12 @@ console.log(`Converted Amount: $${convertCurrency(250, 0.85)}`);
 // Task 6: Higher Order Functions
 
 let orders = [200, 600, 1200, 450, 800];
-// creatng an array of ordes with order amounts
+// creating an array of ordes with order amounts
 
 function applyBulkDiscount(orders, discountFunction)
 // creating a function that calculates the discounted orders
 { return orders.map(discountFunction);}
-// gives the output that applys the discount function to multiple orders
+// gives the output that applies the discount function to multiple orders
 
 let discount9 = (orders, amount => amount > 500 ? amount * 0.9: amount); 
 // if order numbers are above 500, the 10% discount is applied 
@@ -119,7 +119,7 @@ console.log("Total Expenses:", (tracker(150)));
 
 function calculateYearsToPromotion(employeeLevel)
 // creating a function that calculates how many years until an employee reaches level 10 based on their current level
-{ if (employeeLevel >= 10)  // employeeLevel must equal 10 or more
+{ if (employeeLevel >= 10)  // employeeLevel must equal 10 or more 
    {  return 0; }
     let yearsUntil = 10 - employeeLevel;  // takes current level and subtracts it from 10 to find how many years until level 10 
     return yearsUntil * 2; // multiplies the remaining years and multiplies it by 2 because promotions happen every two years
